@@ -222,10 +222,14 @@ public class MainActivity extends AppCompatActivity implements MVPInterface.Main
             public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
                 if(playbackState == Player.STATE_READY) {
                     player.applyAspectRatio();
+                    // отключает автоблокировку/затемнение экрана
+                    player.video.setKeepScreenOn(true);
                 } else if(playWhenReady){
-
+                    // отключает автоблокировку/затемнение экрана
+                    player.video.setKeepScreenOn(true);
                 } else {
-
+                    // включает автоблокировку/затемнение экрана
+                    player.video.setKeepScreenOn(false);
                 }
             }
             @Override

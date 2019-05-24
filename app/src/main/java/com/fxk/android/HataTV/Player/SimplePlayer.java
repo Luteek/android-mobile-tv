@@ -52,7 +52,7 @@ public class SimplePlayer implements ExoPlayer.EventListener,
     private MediaSource videoSource;
     private DataSource.Factory dataSourceFactory;
     private Context context;
-    private SurfaceView video;
+    public SurfaceView video;
     private Uri current_channel;
 
     TextView video_ratio;
