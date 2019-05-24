@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">HataTV</string>
+    <string name="connectionErrorPermission">
+        Server: you have no permission
+    </string>
+    <string name="connectionErrorServer">
+        Server don t work now. Try again later
+    </string>
+
+
+    <string name="exceptNetwork">
+        Не удается установить соединение с Интернетом
+    </string>
+    <string name="exceptServer404">
+        К сожалению сервер временно не доступен. Попрбуйте позже
+    </string>
+    <string name="exceptServer403">
+        Нет доступа к телеканалу, убедитесь что Вы подключены к сети Вашего провайдера.
+    </string>
+    <string name="exceptChannel">
+        Телеканал временно не работает.
+    </string>
+    <string name="exceptPlayer">
+        Критическая ошибка плеера. Перезапустите приложение.
+    </string>
+
+    <string name="exceptBtnRetry">
+        Попробовать снова
+    </string>
+    <string name="exceptBtnOK">
+        ОК
+    </string>
+
+    <string name="dscrpt">
+        group
+    </string>
+
+</resources>

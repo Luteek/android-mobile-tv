@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <SurfaceView
+                android:id="@+id/videoBoard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity = "center"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/topInfo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/top_info_gradient"
+            android:foregroundGravity="top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/top_types_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:src="@mipmap/baseline_menu_white_48" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="260dp" />
+
+            <TextView
+                android:id="@+id/programme_air"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="315dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:textColor="#FFFF"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/btn_ratio"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@mipmap/baseline_photo_size_select_small_white_48" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/debug_console"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#363535"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="5dp">
+            <TextView android:id="@+id/video_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#fff"/>
+            <TextView android:id="@+id/display_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#fff"/>
+            <TextView android:id="@+id/custom_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryDark"
+                android:cacheColorHint="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/types_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="left"
+                    android:src="@mipmap/baseline_menu_white_48"
+                    android:contentDescription="@string/dscrpt"/>
+
+                <TextView
+                    android:id="@+id/types_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:textSize="20sp"
+                    android:text="Все"
+                    android:ellipsize="end"
+                    android:singleLine="true"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/menu"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/listTypeChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:listSelector="@drawable/list_item_selector"
+                    android:visibility="invisible"
+                    android:scrollbars="none"/>
+
+                <ListView
+                    android:id="@+id/listChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:listSelector="@drawable/list_item_selector"
+                    android:scrollbars="none"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listProgrammes"
+            android:layout_marginStart="255dp"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollbars="none"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/infoBoard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/exception_text"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/exception_button"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
